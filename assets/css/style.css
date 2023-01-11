@@ -926,7 +926,7 @@ section .container {
   animation: move-front 0.2s ease-out;
   animation-direction: alternate;
   z-index: 1;
-  color: var(--light);
+  color: #ffd;
 }
 @keyframes move-front {
   0%{z-index: -1;opacity: 0;}
