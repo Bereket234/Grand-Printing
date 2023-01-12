@@ -912,8 +912,13 @@ section .container {
   text-align: left;
   overflow: hidden;
 }
-.service-list ui{
+.service-list h4{
+  color: rgba(100, 100, 100, 0.1);
+
+}
+.service-list ul{
   position: relative;
+  top: 100px;
 }
 .s-l1{
   background-image: url('../img/services/photo_2022-12-27_14-15-33.jpg'); 
@@ -956,16 +961,50 @@ section .container {
 }
 
 .services .icon-box:hover .service-list{
-  animation: move-front 0.2s ease-out;
+  animation: move-front 0.3s ease-in-out;
   animation-direction: alternate;
   z-index: 1;
   color: #ffd;
+}
+.services .icon-box:hover .service-list ul{
+  animation: list-animation 0.4s ease-in-out;
+  top:0;
+} 
+.services .icon-box:hover .service-list h4{
+  animation: head-animation 0.3s ease-in-out;
+  color: var(--light);
 }
 @keyframes move-front {
   0%{z-index: -1;opacity: 0;}
   50%{z-index: 1;opacity: 0.2;color: var(--light);}
   100%{z-index: 1;opacity: 1;color: var(--light);}
   
+}
+@keyframes list-animation {
+  0%{
+    color: rgba(100, 100, 100, 0.1);
+    top: 100px;
+  }
+  20%{
+    top: 10px;
+  }
+  50%{
+    color: rgba(100, 100, 100, 0.1);
+    top:10px;
+  }
+  100%{
+    color:var(--light);
+    top: 0;
+  }
+  
+}
+@keyframes head-animation {
+  0%{
+    color: rgba(100, 100, 100, 0.1);
+  }
+  100%{
+    color: var(--light);
+  }
 }
 
 /*--------------------------------------------------------------
