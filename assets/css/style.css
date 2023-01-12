@@ -221,6 +221,12 @@ h6 {
     font-size: 36px;
     align-self: flex-start;
   }
+  .mob{
+    display: block;
+  }
+  .download-btn{
+    display: none;
+  }
 
   #header1 h2 {
     color: #45505b;
@@ -235,18 +241,34 @@ h6 {
   }
 
   #header1 .social-links {
-    margin-top: 40px;
+    margin-top: 50px;
     align-self: flex-start;
   }
 
   #header1 .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     margin-left:0;
   }
 
   
+}
+
+
+.download-btn{
+  position: relative;
+  top: 15px;
+  align-self: flex-start;
+  background-color: var(--background);
+  text-decoration: none;
+  border: var(--primary) 2px solid;
+  color: var(--secondary);
+  padding: 5px 20px;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 20px;
 }
 
 /* Header1 Top */
@@ -281,6 +303,9 @@ h6 {
 @media (max-width: 768px) {
   #header1.header1-top {
     height: 60px;
+  }
+  .download-btn{
+    display: none;
   }
 
   #header1.header1-top h1 {
@@ -379,9 +404,11 @@ h6 {
   padding: 0 5px 0 7px;
   color: var(--medium);
 }
-
+.mob{
+  display: none;
+}
 @media (min-width: 992px) {
-
+  
   .nav-menu a,
   .nav-menu a:focus {
     width: 56px;
@@ -420,11 +447,16 @@ h6 {
   display: block;
 }
 
+
 /**
 * Mobile Navigation 
 */
+#header{
+  background-color: var(--background);
+}
 .mobile-nav-toggle {
   position: fixed;
+
   right: 10px;
   top: 10px;
   z-index: 9998;
@@ -455,6 +487,7 @@ h6 {
   color: #fff;
   background-color: var(--primary);
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -877,7 +910,7 @@ section .container {
   z-index: -1;
   color: var(--background);
   text-align: left;
-  
+  overflow: hidden;
 }
 .service-list ui{
   position: relative;
@@ -1357,6 +1390,12 @@ section .container {
   .mapouter{
     height:300px;
     width:370px;
+  }
+  .mob{
+    display: block;
+  }
+  .download-btn{
+    display: none;
   }
   
   .gmap_canvas {
