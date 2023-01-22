@@ -25,7 +25,7 @@ body::before {
   position: fixed;
   height: 100px;
   background: var(--background) url("../img/Grand_logo-01-01.png") 85% center no-repeat;
-  background-size: 500px;
+  background-size: 40%;
   left: 0;
   right: 0;
   top: 0;
@@ -38,7 +38,7 @@ body::before {
     content: "";
     height: 30px;
     background: var(--background) url("../img/Grand_logo-01-01.png") 85% center no-repeat;
-    background-size: 200px;
+    background-size: 50%;
     left: 0;
     right: 0;
     top: 0;
@@ -51,7 +51,7 @@ body::before {
     content: "";
     height: 30px;
     background: var(--background) url("../img/Grand_logo-01-01.png") center 10% no-repeat;
-    background-size: 200px;
+    background-size: 60%;
     left: 0;
     right: 0;
     top: 0;
@@ -238,6 +238,7 @@ h6 {
   .typed {
     color: white;
     letter-spacing: 1px;
+    margin-top: 5px;
   }
 
   #header1 .social-links {
@@ -263,12 +264,12 @@ h6 {
   align-self: flex-start;
   background-color: var(--background);
   text-decoration: none;
-  border: var(--primary) 2px solid;
+  border: var(--primary) .002rem solid;
   color: var(--secondary);
   padding: 5px 20px;
   font-size: large;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 /* Header1 Top */
@@ -724,10 +725,29 @@ section .container {
   position: relative;
   align-self: center;
   z-index: 2;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 .testimonials .testimonial-item .testimonial-img:hover{
-  filter: none;
-  transform: scale(1.3);
+  animation: testimonial;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  
+}
+@keyframes testimonial {
+  0%{
+    filter: grayscale(.7);
+    scale: 1;
+  }
+
+  50%{
+    filter: grayscale(0);
+    scale: 1.3;
+  }
+  100%{
+    filter: grayscale(.7);
+    scale: 1;
+  }
 }
 
 .testimonials .swiper-pagination {
@@ -921,7 +941,7 @@ section .container {
   top: 100px;
 }
 .s-l1{
-  background-image: url('../img/services/photo_2022-12-27_14-15-33.jpg'); 
+  background-image: url('../img/services/photo_2022-12-27_14-15-39.jpg'); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -929,25 +949,25 @@ section .container {
   
   
 }.s-l2{
-  background-image: url('../img/services/photo_2022-12-27_14-15-34.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}.s-l3{
-  background-image: url('../img/services/photo_2022-12-27_14-15-39.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}.s-l4{
   background-image: url('../img/services/photo_2022-12-27_14-15-36.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}.s-l5{
+}.s-l3{
+  background-image: url('../img/services/photo_2022-12-27_14-15-35.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}.s-l4{
   background-image: url('../img/services/photo_2022-12-27_14-15-37.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}.s-l5{
+  background-image: url('../img/services/photo_2022-12-27_14-15-33.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
